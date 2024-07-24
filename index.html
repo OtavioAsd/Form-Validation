@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="all-content">
+      <div class="content-box">
+        <h1 id="header">Formulário</h1>
+        <form id="form">
+          <div class="inputs-bars">
+            <input
+              oninput="nameValidate()"
+              type="text"
+              id="inputName"
+              class="input-field"
+              placeholder="Digite seu nome"
+              autocomplete="none"
+            />
+            <span class="span-required"
+              >Nome deve ter no mínimo 3 caracteres</span
+            >
+          </div>
+          <div class="inputs-bars">
+            <input
+              oninput="emailValidate()"
+              type="text"
+              id="inputEmail"
+              class="input-field"
+              placeholder="Digite seu email"
+            />
+            <span class="span-required">Digite um email válido</span>
+          </div>
+          <div class="inputs-bars">
+            <input
+              oninput="passwordValidate()"
+              type="password"
+              id="inputPassword"
+              class="input-field"
+              placeholder="Digite sua senha"
+            />
+            <span class="span-required">Senha mínima de 6 caracteres</span>
+          </div>
+          <div class="inputs-bars">
+            <input
+              oninput="passwordConfirm()"
+              type="password"
+              id="inputPasswordConfirm"
+              class="input-field"
+              placeholder="Confirme sua senha"
+            />
+            <span class="span-required">Senhas devem ser compatíveis</span>
+          </div>
+        </form>
+        <div id="button">
+          <button
+            onclick="validadeForm()"
+            type="submit"
+            id="submit"
+            class="submit-btn"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
